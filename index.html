@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#193f32"><meta name="description" content="가톨릭대학교 경영학과 권형우의 포트폴리오. 개인금융, 자산관리, 데이터 분석과 고객 중심 소통."><title>권형우 | 금융과 사람을 연결하는 포트폴리오</title><style>
+:root{--cream:#f7f4e9;--paper:#fffdf6;--green:#193f32;--green2:#2c5844;--sage:#e1e8d7;--ink:#213a30;--muted:#52665a;--line:#d9dfd0;--gold:#a67a39;--radius:20px;--shadow:0 12px 36px #243e2c0b;--header:76px}
+
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(var(--header) + 20px)}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Malgun Gothic","Apple SD Gothic Neo",sans-serif;line-height:1.75;word-break:keep-all;overflow-wrap:anywhere}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+button,a,summary{-webkit-tap-highlight-color:transparent}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #9b7133;outline-offset:4px}
+img,svg{max-width:100%;display:block}
+h1,h2,h3,p,figure{margin:0}
+h1,h2,h3{line-height:1.32;letter-spacing:-.04em}
+h2{font-size:clamp(1.85rem,3.6vw,3rem)}
+h3{font-size:1.18rem}
+p{font-size:.96rem}
+section{scroll-margin-top:10px}
+.wrap{width:min(1160px,calc(100% - 64px));margin:auto}
+.skip{position:absolute;top:-100px;left:12px;padding:12px;background:var(--paper);z-index:99}
+.skip:focus{top:8px}
+.header{position:sticky;top:0;z-index:10;background:var(--cream);border-bottom:1px solid var(--line)}
+.header-inner{min-height:var(--header);display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-size:1rem;font-weight:800;letter-spacing:-.03em}
+.brand-mark{width:35px;height:35px;border-radius:11px;background:var(--green);color:var(--cream);display:grid;place-items:center;font-size:.82rem;letter-spacing:0}
+.nav{display:flex;align-items:center;gap:25px}
+.nav a{text-decoration:none;font-size:.9rem;font-weight:650;color:var(--muted);white-space:nowrap}
+.nav a:hover,.nav a[aria-current="location"]{color:var(--green);text-decoration:underline;text-underline-offset:6px}
+.menu-toggle{display:none}
+.hero{padding:67px 0 42px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,1fr);align-items:center;gap:36px}
+.hero-copy{min-width:0}
+.eyebrow{font-size:.72rem;letter-spacing:.085em;font-weight:750;color:var(--green2);text-transform:uppercase}
+.hero .eyebrow{display:flex;align-items:center;gap:9px}
+.hero .eyebrow:before{content:"";width:19px;height:2px;background:var(--green2)}
+h1{font-size:clamp(2.35rem,4.3vw,4.2rem);font-weight:830;line-height:1.17;margin:17px 0 19px}
+.hero h1 span{color:var(--green2)}
+.identity{font-weight:750;font-size:1.1rem;margin-bottom:12px}
+.lead{color:var(--muted);max-width:39rem;line-height:1.9}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:45px;padding:10px 19px;border:1px solid var(--green);border-radius:9px;text-decoration:none;font-size:.88rem;font-weight:700;background:var(--green);color:var(--paper)}
+.btn:hover{background:var(--green2)}
+.btn.alt{background:transparent;color:var(--green);border-color:#a3b29e}
+.btn.alt:hover{background:var(--sage)}
+.scene-figure{min-width:0;align-self:center}
+.scene-stage{padding:32px 25px 23px;overflow:hidden;position:relative;isolation:isolate;border-radius:24px;background:#eeeede;border:1px solid #dfe3d1}
+.scene-motion{width:100%;transform:translate3d(0,0,0);transform-origin:50% 50%;pointer-events:none}
+.scene-motion svg{width:100%;height:auto}
+.scene-caption{padding:12px 4px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.scene-caption p{font-size:.79rem;color:var(--muted);line-height:1.7}
+.motion-toggle{flex:none;border:1px solid #a3b29e;border-radius:8px;padding:6px 9px;background:transparent;color:var(--green);font-size:.75rem;min-height:36px;white-space:nowrap}
+.motion-toggle:hover{background:var(--sage)}
+.motion-toggle:disabled{cursor:default;opacity:.75}
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:34px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.metric{padding:22px 20px;border-right:1px solid var(--line)}
+.metric:first-child{padding-left:0}
+.metric:last-child{border:0}
+.metric strong{display:block;font-size:clamp(1.35rem,2.7vw,2rem);color:var(--green);font-weight:800;letter-spacing:-.045em;line-height:1.3}
+.metric span{display:block;margin-top:4px;color:var(--muted);font-size:.78rem}
+.section{padding:75px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:27px}
+.section-head .eyebrow{margin-bottom:7px}
+.section-head p:not(.eyebrow){max-width:420px;color:var(--muted);font-size:.91rem}
+.section.alt-bg{background:#edf0e4;border-block:1px solid var(--line)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.filter{padding:8px 14px;min-height:40px;border:1px solid #aab7a2;border-radius:30px;color:var(--green);background:transparent;font-size:.83rem;font-weight:700}
+.filter[aria-pressed="true"]{background:var(--green);color:var(--paper);border-color:var(--green)}
+.filter:hover:not([aria-pressed="true"]){background:var(--sage)}
+.project-count{color:var(--muted);font-size:.8rem;margin:0 0 13px}
+.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;align-items:start}
+.project{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:23px;box-shadow:var(--shadow);min-width:0;display:flex;flex-direction:column;min-height:330px}
+.project[hidden]{display:none}
+.project-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.project-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:var(--sage);color:var(--green)}
+.project-icon svg{width:25px;height:25px}
+.index{font-size:.71rem;font-weight:700;color:#627665;letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.project .eyebrow{letter-spacing:0;font-size:.73rem;margin-bottom:7px}
+.dot{color:#81917a}
+.project h3{font-size:1.27rem;margin-bottom:7px}
+.meta{color:var(--muted);font-size:.76rem;line-height:1.65}
+.project-result{font-size:.88rem;margin-top:15px;line-height:1.7}
+.tags{color:var(--green2);font-weight:650;font-size:.73rem;margin:13px 0 15px}
+.project details{margin-top:auto;border-top:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px;color:var(--green);font-size:.82rem;font-weight:750;padding:13px 0 0;min-height:40px}
+summary::-webkit-details-marker{display:none}
+.plus{position:relative;width:15px;height:15px;flex:none}
+.plus:before,.plus:after{content:"";position:absolute;background:currentColor;left:2px;top:7px;width:11px;height:1.5px}
+.plus:after{transform:rotate(90deg)}
+details[open] .plus:after{transform:rotate(0)}
+dl{margin:14px 0 0}
+dt{font-size:.76rem;color:var(--green2);font-weight:800;margin-top:12px}
+dd{margin:3px 0 0;font-size:.84rem;color:var(--muted)}
+.skill-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.skill{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--paper)}
+.skill h3{margin:7px 0 9px}
+.skill p{font-size:.87rem;color:var(--muted)}
+.skill .skill-tools{font-weight:700;color:var(--green2);margin-bottom:9px}
+.subhead{font-size:1.3rem;margin:32px 0 14px}
+.credentials{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.credential{padding:19px 22px;background:var(--green);color:var(--paper);border-radius:15px}
+.credential span{color:#d7e5ce;font-size:.75rem}
+.credential strong{display:block;font-size:1.65rem;line-height:1.4}
+.credential p{color:#e5eadc;font-size:.8rem}
+.courses{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.course{border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:15px 17px}
+.course strong{font-size:.85rem;color:var(--green)}
+.course p{font-size:.83rem;color:var(--muted);margin-top:3px}
+.activity-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.1fr);gap:30px;align-items:start}
+.awards{background:var(--green);color:var(--paper);border-radius:var(--radius);padding:25px;position:sticky;top:calc(var(--header) + 20px)}
+.awards .eyebrow{color:#c8d9bc}
+.awards h3{font-size:1.45rem;margin:8px 0 17px}
+.award{padding:13px 0;border-top:1px solid #ffffff29}
+.award strong{display:block;font-size:.94rem}
+.award span{font-size:.75rem;color:#d3e1c8}
+.timeline{padding:0;margin:0;list-style:none}
+.activity{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;position:relative;padding:0 0 23px;margin:0 0 23px;border-bottom:1px solid var(--line)}
+.activity:last-child{margin:0;border:0}
+.activity-date time{display:block;font-size:.82rem;font-weight:750;color:var(--green2)}
+.activity-date span{font-size:.73rem;color:var(--muted)}
+.activity-content h3{font-size:1.1rem;margin:0 0 8px}
+.activity-content p{font-size:.86rem;color:var(--muted)}
+.activity-content p strong{font-size:.75rem;color:var(--green2);margin-right:5px}
+.activity-result{display:inline-block;margin-top:7px;font-size:.73rem;font-weight:700;color:var(--green2);background:var(--sage);border-radius:5px;padding:3px 8px}
+.archive{margin-top:27px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px}
+.archive p{margin:8px 0;color:var(--muted);font-size:.88rem}
+.topic-list{display:flex;flex-wrap:wrap;gap:8px}
+.topic-list span{font-size:.78rem;border:1px solid var(--line);padding:5px 10px;border-radius:7px}
+.contact{background:var(--green);color:var(--paper);padding:65px 0}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.contact .eyebrow{color:#c8d9bc}
+.contact h2{margin:7px 0 13px}
+.contact p{color:#d6e3d3}
+.contact-card{background:#ffffff0b;border:1px solid #ffffff29;border-radius:15px;padding:24px}
+.contact-card .mail{display:block;color:var(--paper);font-size:clamp(.95rem,2.3vw,1.27rem);font-weight:750;margin:5px 0 14px;text-underline-offset:4px}
+.contact-card .btn{background:var(--paper);color:var(--green);border-color:var(--paper)}
+.contact-card .btn.alt{background:transparent;color:var(--paper);border-color:#b8cbb4}
+.contact-actions{display:flex;gap:8px;flex-wrap:wrap}
+.copy-status{min-height:1.5em;font-size:.75rem!important;margin-top:8px}
+.footer{background:#153429;color:#dce6d8;padding:20px 0;font-size:.77rem}
+.footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.footer a{text-underline-offset:3px}
+.note{font-size:.77rem;color:var(--muted);margin-top:12px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+@media(max-width:950px){.wrap{width:min(100% - 44px,1160px)}
+.hero-grid{gap:20px}
+.project-grid,.skill-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.activity-layout{grid-template-columns:1fr}
+.awards{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+.awards .eyebrow,.awards h3{grid-column:1/-1}
+.activity{grid-template-columns:155px minmax(0,1fr)}
+}
+
+@media(max-width:720px){:root{--header:64px}
+.wrap{width:calc(100% - 32px)}
+.header-inner{flex-wrap:wrap;gap:0}
+.brand{font-size:.95rem}
+.menu-toggle{display:none}
+.js .menu-toggle{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid #aab7a2;border-radius:8px;background:transparent;color:var(--green);font-size:.83rem;font-weight:700;min-height:40px}
+.nav{width:100%;display:flex;flex-wrap:wrap;gap:4px 18px;padding:8px 0 14px}
+.js .nav{display:none}
+.js .nav.open{display:flex}
+.nav a{padding:8px 0}
+.hero{padding:38px 0 24px}
+.hero-grid{grid-template-columns:1fr;gap:20px}
+.hero-copy{order:0}
+.scene-figure{order:1}
+.scene-stage{padding:29px 16px 20px}
+.scene-caption{flex-wrap:wrap}
+.scene-caption p{flex:1;min-width:155px}
+.metric{padding:13px 10px}
+.metric:first-child{padding-left:10px}
+.metrics{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:22px}
+.metric:nth-child(2){border-right:0}
+.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.section{padding:45px 0}
+.section-head{display:block;margin-bottom:20px}
+.section-head p:not(.eyebrow){margin-top:9px}
+.project-grid,.skill-grid{grid-template-columns:1fr}
+.project{min-height:0;padding:20px}
+.project-top{margin-bottom:13px}
+.credentials{grid-template-columns:1fr}
+.courses{grid-template-columns:1fr}
+.activity{grid-template-columns:1fr;gap:6px;margin-bottom:17px;padding-bottom:17px}
+.activity-date{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.awards{padding:20px;grid-template-columns:1fr}
+.contact{padding:45px 0}
+.contact-grid{grid-template-columns:1fr;gap:20px}
+.contact-card{padding:19px}
+.hero-actions .btn{flex:1 1 auto}
+.section-head .eyebrow{margin-bottom:5px}
+}
+
+@media(prefers-reduced-motion:reduce){.scene-motion{transform:none!important}
+}
+@media print{.header,.filters,.motion-toggle,.hero-actions,.contact-actions,.footer,.copy-status{display:none!important}
+.wrap{width:100%}
+.hero,.section,.contact{padding:20px 0}
+.project-grid,.skill-grid{grid-template-columns:repeat(2,1fr)}
+.project,.skill,.activity{break-inside:avoid}
+.scene-motion{transform:none!important}
+.awards{position:static}
+}
+
+</style></head>
+<body><a class="skip" href="#main">본문 바로가기</a><header class="header"><div class="wrap header-inner"><a class="brand" href="#about"><span class="brand-mark" aria-hidden="true">KW</span><span>권형우<span style="font-weight:400;color:#617461"> / Portfolio</span></span></a><button type="button" class="menu-toggle" aria-controls="navigation" aria-expanded="false">메뉴 <span aria-hidden="true">☰</span></button><nav id="navigation" class="nav" aria-label="주 메뉴"><a href="#about">소개</a><a href="#projects">프로젝트</a><a href="#skills">역량</a><a href="#activities">활동 기록</a><a href="#contact">연락처</a></nav></div></header>
+<main id="main">
+<section id="about" class="hero"><div class="wrap"><div class="hero-grid"><div class="hero-copy"><p class="eyebrow">Banking · Wealth Management · Data</p><h1>금융을 이해하고,<br><span>사람을 이해합니다.</span></h1><p class="identity">권형우 · 가톨릭대학교 경영학과</p><p class="meta" style="margin:-6px 0 12px">John Kwon · 22학번 · 3학년 2학기 (2026년 기준)</p><p class="lead">복잡한 금융을 고객의 언어로 전달하는 금융 전문가를 꿈꿉니다. 기업분석, 자산운용, 재무설계와 다양한 프로젝트를 통해 데이터를 이해하고, 정보를 쉽게 전달하며, 고객과 신뢰를 형성하는 역량을 키워가고 있습니다.</p><p class="lead" style="margin-top:10px">관심 분야는 개인금융, PB·WM, 금융시장 분석, 디지털 금융입니다. 장기적으로 고객의 생애주기와 상황에 맞는 금융 솔루션을 제안하는 개인금융 전문가로 성장하고자 합니다.</p><div class="hero-actions"><a class="btn" href="#projects">프로젝트 보기 <span aria-hidden="true">↗</span></a><a class="btn alt" href="#contact">연락하기</a></div></div><figure class="scene-figure"><div class="scene-stage"><div class="scene-motion"><svg viewBox="0 0 580 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="scene-title scene-desc">
+<title id="scene-title">작은 데이터 작업실</title><desc id="scene-desc">둥근 캐릭터가 듀얼 모니터에서 데이터를 분석하고 있습니다. 나무 책상, 식물, 머그컵이 있는 포근한 작업실입니다.</desc>
+<defs><linearGradient id="wall" x2="0%" y2="100%"><stop stop-color="#f8f2df"/><stop offset="1" stop-color="#e5ead8"/></linearGradient><linearGradient id="wood" x1="0%" y1="0%" x2="0%" y2="100%"><stop stop-color="#e4be8e"/><stop offset="1" stop-color="#c69564"/></linearGradient><linearGradient id="screen" x2="0%" y2="100%"><stop stop-color="#385f50"/><stop offset="1" stop-color="#183e34"/></linearGradient><linearGradient id="body" x2="0%" y2="100%"><stop stop-color="#f8e5bb"/><stop offset="1" stop-color="#e5c28c"/></linearGradient><linearGradient id="pot" x2="0%" y2="100%"><stop stop-color="#e7ae8a"/><stop offset="1" stop-color="#bd795b"/></linearGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#294737" flood-opacity=".15"/></filter><filter id="soft" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#233d30" flood-opacity=".15"/></filter></defs>
+<rect x="23" y="20" width="534" height="398" rx="32" fill="url(#wall)" stroke="#e0dfcb"/>
+<path d="M24 321h532v65q0 32-32 32H56q-32 0-32-32Z" fill="#d9dfc8"/><ellipse cx="290" cy="391" rx="224" ry="20" fill="#647862" opacity=".13"/>
+<!-- window -->
+<g filter="url(#soft)"><rect x="48" y="48" width="134" height="135" rx="12" fill="#fdf9eb"/><rect x="56" y="56" width="118" height="119" rx="6" fill="#cce2d6"/><circle cx="143" cy="86" r="18" fill="#f4d991"/><path d="M56 139q35-35 66 0 24-23 52 0v36H56Z" fill="#97bda0"/><path d="M56 154q28-21 63 1 30-20 55-4v24H56Z" fill="#719a7f"/><path d="M115 56v119M56 115h118" stroke="#fdf9eb" stroke-width="6"/></g>
+<g transform="translate(438 49)" filter="url(#soft)"><rect width="80" height="95" rx="7" fill="#b69a71"/><rect x="5" y="5" width="70" height="85" rx="3" fill="#fff9eb"/><path d="M19 66h42M22 58l12-15 10 5 14-22" fill="none" stroke="#527b62" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="58" cy="26" r="4" fill="#d8ad65"/><path d="M24 76h32" stroke="#c4c9ad" stroke-width="2"/></g>
+<!-- desk legs -->
+<g filter="url(#shadow)"><path d="M105 288h19l-5 99h-19ZM454 288h19l5 99h-19Z" fill="#946947"/><path d="M108 353h360v10H108Z" fill="#b18155"/><rect x="78" y="274" width="424" height="28" rx="9" fill="url(#wood)"/><rect x="78" y="274" width="424" height="10" rx="5" fill="#f0d0a7"/><path d="M92 293h398" stroke="#b7895b" opacity=".55"/></g>
+<!-- monitors -->
+<g filter="url(#soft)"><path d="M199 224h12v39h-12zM368 224h12v39h-12z" fill="#4e6c59"/><rect x="171" y="260" width="68" height="8" rx="4" fill="#45634f"/><rect x="340" y="260" width="68" height="8" rx="4" fill="#45634f"/><rect x="122" y="121" width="166" height="112" rx="10" fill="#496a58"/><rect x="129" y="128" width="152" height="96" rx="5" fill="url(#screen)"/><rect x="291" y="111" width="166" height="112" rx="10" fill="#496a58"/><rect x="298" y="118" width="152" height="96" rx="5" fill="url(#screen)"/><circle cx="205" cy="228" r="2" fill="#b8d5a4"/><circle cx="374" cy="218" r="2" fill="#b8d5a4"/></g>
+<g stroke="#b3cfb1" opacity=".25"><path d="M143 151h124M143 171h124M143 191h124M143 211h124"/><path d="M315 142h119M315 164h119M315 186h119"/></g><g fill="#c6dba9"><rect x="143" y="138" width="45" height="5" rx="2"/><rect x="311" y="128" width="47" height="5" rx="2"/></g><path d="M145 202l22-15 21 6 20-24 20 9 35-26" stroke="#e9ca83" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><g fill="#f1d38c"><circle cx="145" cy="202" r="3"/><circle cx="208" cy="169" r="3"/><circle cx="263" cy="152" r="3"/></g><g fill="#94bfa0"><rect x="319" y="174" width="15" height="28" rx="3"/><rect x="342" y="159" width="15" height="43" rx="3"/><rect x="365" y="168" width="15" height="34" rx="3"/><rect x="388" y="145" width="15" height="57" rx="3"/><rect x="411" y="135" width="15" height="67" rx="3" fill="#e9ca83"/></g>
+<!-- plant -->
+<g filter="url(#soft)"><path d="M84 243q-5-26-4-60M84 231q-15-17-30-23M85 222q14-23 28-28" stroke="#56795a" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M79 209q-28-13-18-40 25 4 18 40Z" fill="#81a47a"/><path d="M81 222q-27 1-37-21 24-10 37 21Z" fill="#537e5a"/><path d="M86 222q28-1 32-29-26-5-32 29Z" fill="#70986a"/><path d="M82 205q-1-26 19-34 12 25-19 34Z" fill="#a1b986"/><path d="M63 241h42l-7 32H70Z" fill="url(#pot)"/><rect x="60" y="236" width="48" height="9" rx="4" fill="#e9b598"/></g>
+<!-- stationery and cup -->
+<g filter="url(#soft)"><path d="M451 243h24v23q-12 13-24 0Z" fill="#fcf3da"/><path d="M474 247h7a7 7 0 0 1 0 14h-7" fill="none" stroke="#fcf3da" stroke-width="5"/><ellipse cx="463" cy="243" rx="12" ry="4" fill="#b58c64"/><path d="M454 229q-5-6 0-12M466 229q-5-6 0-12" stroke="#a8b59b" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M458 253h10" stroke="#8ba58b" stroke-width="3" stroke-linecap="round"/><path d="M127 266l44-4 10 9-43 4Z" fill="#f5eee0"/><path d="M133 268l35-3" stroke="#a2ad91" stroke-width="2"/></g>
+<!-- keyboard -->
+<path d="M223 259h115l12 13H211Z" fill="#f2eedf" stroke="#a4ae93"/><g stroke="#a4ae93" stroke-width="1.4"><path d="M224 263h112M220 267h120"/><path d="M234 260v10m12-10v10m12-10v10m12-10v10m12-10v10m12-10v10m12-10v10m12-10v10m12-10v10"/></g><ellipse cx="365" cy="265" rx="9" ry="6" fill="#f2eedf" stroke="#a4ae93"/>
+<!-- rounded character on chair -->
+<g filter="url(#shadow)"><rect x="247" y="301" width="96" height="79" rx="31" fill="#45684f"/><path d="M295 369v22m-24 0h48" stroke="#43614d" stroke-width="7" stroke-linecap="round"/><ellipse cx="294" cy="316" rx="57" ry="47" fill="#86a584"/><path d="M252 311q-23-8-28-32m111 31q20-9 24-32" fill="none" stroke="#dcb980" stroke-width="17" stroke-linecap="round"/><ellipse cx="294" cy="256" rx="58" ry="56" fill="url(#body)" stroke="#d2b17f" stroke-width="2"/><circle cx="250" cy="218" r="16" fill="#edc991"/><circle cx="338" cy="218" r="16" fill="#edc991"/><ellipse cx="294" cy="260" rx="47" ry="39" fill="#f9e9c8"/><circle cx="278" cy="251" r="4" fill="#364c3e"/><circle cx="310" cy="251" r="4" fill="#364c3e"/><ellipse cx="266" cy="263" rx="8" ry="4" fill="#e9b7a3"/><ellipse cx="322" cy="263" rx="8" ry="4" fill="#e9b7a3"/><path d="M289 260q5 7 10 0" fill="none" stroke="#53644d" stroke-width="2.5" stroke-linecap="round"/><path d="M278 218q16-14 30 0" stroke="#c49d66" stroke-width="3" fill="none" stroke-linecap="round"/><rect x="275" y="303" width="39" height="9" rx="4" fill="#d3e0b9"/></g>
+<g fill="#8ca485"><circle cx="214" cy="76" r="3"/><circle cx="403" cy="82" r="3"/><path d="M240 58v14m-7-7h14M391 55v12m-6-6h12" stroke="#8ca485" stroke-width="2" stroke-linecap="round"/></g>
+</svg></div></div><figcaption class="scene-caption"><p><strong>작은 데이터 작업실</strong> — 데이터를 정리하고 의미를 찾아, 사람에게 필요한 정보로 전달하는 제 일하는 방식을 표현했습니다.</p><button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false">움직임 멈춤</button></figcaption></figure></div><div class="metrics" aria-label="주요 프로필"><div class="metric"><strong>3.96 / 4.5</strong><span>학점 · 3학년 1학기 기준</span></div><div class="metric"><strong>AFPK</strong><span>재무설계 자격 · 2026.09</span></div><div class="metric"><strong>최우수 수료</strong><span>EIC 45기 · 100명 중 가산점 1위</span></div><div class="metric"><strong>PB / WM</strong><span>목표 직무 · 개인금융</span></div></div></div></section>
+
+<section id="projects" class="section alt-bg"><div class="wrap"><div class="section-head"><div><p class="eyebrow">01 / Projects</p><h2>문제를 발견하고, 해결합니다.</h2></div><p>금융부터 사회혁신까지, 문제·역할·방법·결과로 정리한 프로젝트 기록입니다. 상세 보기를 눌러 진행 과정을 확인할 수 있습니다.</p></div><div class="filters" role="group" aria-label="프로젝트 분야 필터"><button type="button" class="filter" data-filter="all" aria-pressed="true">전체</button><button type="button" class="filter" data-filter="finance" aria-pressed="false">금융 · 투자</button><button type="button" class="filter" data-filter="business" aria-pressed="false">경영 · 마케팅</button><button type="button" class="filter" data-filter="data" aria-pressed="false">데이터</button><button type="button" class="filter" data-filter="impact" aria-pressed="false">사회혁신</button></div><p id="project-count" class="project-count" aria-live="polite">전체 13개 중 13개 표시</p><div class="project-grid">
+<article class="project" data-category="finance"><div class="project-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18M5 14l4-4 4 2 6-7M15 5h4v4"/></svg></span><span class="index">01 / 13</span></div><p class="eyebrow">금융 · AI <span class="dot">·</span> 진행 중</p><h3>AI 기반 재무설계 웹사이트</h3><p class="meta">AFPK 영 플래너 챌린지 2026<br>2026년 하반기</p><p class="project-result">웹사이트 제작 및 검토 요청. 최종 공모전 결과는 아직 기재하지 않았습니다.</p><p class="tags">재무설계 · AI 활용 · 서비스 기획</p><details><summary>프로젝트 상세 보기 <span class="plus" aria-hidden="true"></span></summary><dl><dt>문제</dt><dd>재무설계 지식을 실제 서비스로 구현하는 방법을 고민했습니다.</dd><dt>나의 역할</dt><dd>AI 기반 재무설계 웹사이트 제작에 참여했습니다.</dd><dt>해결 방법</dt><dd>표준 재무설계 6단계 프로세스를 반영하고, 재무 담당 교수에게 검토를 요청했습니다.</dd><dt>결과</dt><dd>웹사이트 제작 및 검토 요청. 최종 공모전 결과는 아직 기재하지 않았습니다.</dd></dl></details></article>
+
+<article class="project" data-category="impact"><div class="project-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20c-5-3-9-7-9-12a5 5 0 0 1 9-2 5 5 0 0 1 9 2c0 5-4 9-9 12Z"/><path d="M8 12h3l2-3 2 3h2"/></svg></span><span class="index">02 / 13</span></div><p class="eyebrow">사회혁신 · AI <span class="dot">·</span> 완료</p><h3>유니메트로</h3><p class="meta">유니마인드랩 · 캡스톤디자인<br>2026.03 – 06</p><p class="project-result">경로 데이터와 비장애인도 사용할 수 있는 데이터 수집 가이드라인을 제작했습니다.</p><p class="tags">접근성 · 데이터 품질 · 리더십</p><details><summary>프로젝트 상세 보기 <span class="plus" aria-hidden="true"></span></summary><dl><dt>문제</dt><dd>시각장애인이 지하철에서 장애물과 이동 방향 정보를 충분히 얻기 어려운 문제를 발견했습니다.</dd><dt>나의 역할</dt><dd>프로젝트 팀장으로서 기획과 현장 데이터 수집·구조화를 담당했습니다.</dd><dt>해결 방법</dt><dd>김포공항역에서 점자블록, 장애물, 경사로, 계단 방향·개수 및 출구 경로를 조사하고 대표와 현장 검증을 진행했습니다.</dd><dt>결과</dt><dd>경로 데이터와 비장애인도 사용할 수 있는 데이터 수집 가이드라인을 제작했습니다.</dd></dl></details></article>
+
+<article class="project" data-category="finance"><div class="project-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18M5 14l4-4 4 2 6-7M15 5h4v4"/></svg></span><span class="index">03 / 13</span></div><p class="eyebrow">금융 · 투자 <span class="dot">·</span> 완료</p><h3>EIC 자산운용대회</h3><p class="meta">한국경제인협회 산하 EIC 45기<br>2025년 하반기</p><p class="project-result">대회 최종 4위. 근거 중심의 판단과 팀 운용 경험을 쌓았습니다.</p><p class="tags">포트폴리오 · ETF · 협업</p><details><summary>프로젝트 상세 보기 <span class="plus" aria-hidden="true"></span></summary><dl><dt>문제</dt><dd>투자 경험이 부족한 상황에서 합리적 투자 전략을 수립해야 했습니다.</dd><dt>나의 역할</dt><dd>팀장으로서 전체 투자 방향을 설정하고 팀원의 의견을 조율했습니다.</dd><dt>해결 방법</dt><dd>시장 및 종목을 학습하고 주식·ETF를 구성하여 약 2개월간 운용하며 투자 판단의 근거를 공유했습니다.</dd><dt>결과</dt><dd>대회 최종 4위. 근거 중심의 판단과 팀 운용 경험을 쌓았습니다.</dd></dl></details></article>
+
+<article class="project" data-category="finance"><div class="project-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18M5 14l4-4 4 2 6-7M15 5h4v4"/></svg></span><span class="index">04 / 13</span></div><p class="eyebrow">금융 · 분석 <span class="dot">·</span> 완료</p><h3>EIC 기업분석대회</h3><p class="meta">한국경제인협회 산하 EIC 45기<br>2025년 하반기</p><p class="project-result">기업분석대회 2위. 결과뿐 아니라 산출 원리와 가정의 중요성을 이해했습니다.</p><p class="tags">재무분석 · 가치평가 · Excel</p><details><summary>프로젝트 상세 보기 <span class="plus" aria-hidden="true"></span></summary><dl><dt>문제</dt><dd>기업의 성장 가능성과 가치를 정량적으로 설명해야 했습니다.</dd><dt>나의 역할</dt><dd>기업분석 및 밸류에이션 작업을 수행했습니다.</dd><dt>해결 방법</dt><dd>DDM·FCFE 등 가치평가 이론을 학습하고 Excel 수식과 함수로 계산 과정을 구성했습니다. 가정값의 근거를 조사했습니다.</dd><dt>결과</dt><dd>기업분석대회 2위. 결과뿐 아니라 산출 원리와 가정의 중요성을 이해했습니다.</dd></dl></details></article>
+
+<article class="project" data-category="business"><div class="project-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V4h8v3M3 12h18M10 12v3h4v-3"/></svg></span><span class="index">05 / 13</span></div><p class="eyebrow">영업 · 마케팅 <span class="dot">·</span> 완료</p><h3>EIC 대외 홍보 및 협찬</h3><p class="meta">EIC 40대 대외사업부 차장<br>2026년 상반기</p><p class="project-result">광고 노출 295,383회, 링크 클릭 333회. 직전 기수 대비 협찬 약 2배 성사.</p><p class="tags">디지털 마케팅 · 협상 · 관계 관리</p><details><summary>프로젝트 상세 보기 <span class="plus" aria-hidden="true"></span></summary><dl><dt>문제</dt><dd>신규 지원자 확대와 외부 협찬 확보가 필요했습니다.</dd><dt>나의 역할</dt><dd>유료 광고, 협찬 및 제휴 업무를 담당했습니다.</dd><dt>해결 방법</dt><dd>에브리타임과 인스타그램을 활용하고 외부 기업의 니즈를 고려한 제안서 및 성과보고서를 제작했습니다.</dd><dt>결과</dt><dd>광고 노출 295,383회, 링크 클릭 333회. 직전 기수 대비 협찬 약 2배 성사.</dd></dl></details></article>
+
+<article class="project" data-category="business"><div class="project-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V4h8v3M3 12h18M10 12v3h4v-3"/></svg></span><span class="index">06 / 13</span></div><p class="eyebrow">마케팅 · AI <span class="dot">·</span> 완료</p><h3>오마이브랜드 홍보 프로젝트</h3><p class="meta">캡스톤디자인 · 기업 협업<br>2025.09 – 12</p><p class="project-result">두 콘텐츠의 주요 성과 지표를 비교하여 타깃 중심의 마케팅을 학습했습니다.</p><p class="tags">STP · A/B 테스트 · 콘텐츠 기획</p><details><summary>프로젝트 상세 보기 <span class="plus" aria-hidden="true"></span></summary><dl><dt>문제</dt><dd>AI 아트 창작 앱의 효과적인 홍보 방향을 찾아야 했습니다.</dd><dt>나의 역할</dt><dd>홍보 전략 구상과 AI 광고 콘텐츠 제작에 참여했습니다.</dd><dt>해결 방법</dt><dd>대표 미팅을 통해 서비스 강점을 파악하고 STP 분석, 재미형·정보제공형 릴스 A/B 테스트를 진행했습니다.</dd><dt>결과</dt><dd>두 콘텐츠의 주요 성과 지표를 비교하여 타깃 중심의 마케팅을 학습했습니다.</dd></dl></details></article>
+
+<article class="project" data-category="business"><div class="project-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V4h8v3M3 12h18M10 12v3h4v-3"/></svg></span><span class="index">07 / 13</span></div><p class="eyebrow">경영 · 분석 <span class="dot">·</span> 완료</p><h3>DB 기업경영 시뮬레이션</h3><p class="meta">DB김준기문화재단 · 체험스쿨 110기<br>2025.08.20 – 22</p><p class="project-result">10개 팀 중 3위. 학습 퀴즈 100% 정답을 기록했습니다.</p><p class="tags">운영 전략 · 재무지표 · 팀워크</p><details><summary>프로젝트 상세 보기 <span class="plus" aria-hidden="true"></span></summary><dl><dt>문제</dt><dd>가상 기업의 수익성과 경쟁력을 확보해야 했습니다.</dd><dt>나의 역할</dt><dd>COO로서 제품 생산과 운영 전략을 담당했습니다.</dd><dt>해결 방법</dt><dd>DVMP에서 인력·설비·재료 구매부터 판매까지 기획하고 ROE·총자산 성장률을 분석해 전략을 수정했습니다. 원재료 가격 분산투자 전략도 제안했습니다.</dd><dt>결과</dt><dd>10개 팀 중 3위. 학습 퀴즈 100% 정답을 기록했습니다.</dd></dl></details></article>
+
+<article class="project" data-category="business"><div class="project-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V4h8v3M3 12h18M10 12v3h4v-3"/></svg></span><span class="index">08 / 13</span></div><p class="eyebrow">경영 · 기획 <span class="dot">·</span> 완료</p><h3>EIC 비즈니스모델 경진대회</h3><p class="meta">한국경제인협회 산하 EIC 45기<br>2025년 하반기</p><p class="project-result">비즈니스모델 경진대회 1위. 구체적인 사업 아이템과 개인 담당 영역은 추가 기록 예정입니다.</p><p class="tags">사업 기획 · 협업 · 발표</p><details><summary>프로젝트 상세 보기 <span class="plus" aria-hidden="true"></span></summary><dl><dt>문제</dt><dd>경영 이론을 실제 사업 모델로 구체화하는 과제에 도전했습니다.</dd><dt>나의 역할</dt><dd>팀의 비즈니스모델 설계 및 발표 준비에 참여했습니다.</dd><dt>해결 방법</dt><dd>팀원들과 아이디어를 발전시키고 사업 모델을 정리해 발표했습니다.</dd><dt>결과</dt><dd>비즈니스모델 경진대회 1위. 구체적인 사업 아이템과 개인 담당 영역은 추가 기록 예정입니다.</dd></dl></details></article>
+
+<article class="project" data-category="data"><div class="project-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 16v-4m5 4V7m5 9v-6"/></svg></span><span class="index">09 / 13</span></div><p class="eyebrow">데이터 · 분석 <span class="dot">·</span> 추가 기록 예정</p><h3>Business Analytics 창업 데이터 분석</h3><p class="meta">경영학 전공 수업<br>수강 프로젝트</p><p class="project-result">세부 분석 결과 및 사용 도구는 확인 후 추가할 예정입니다.</p><p class="tags">데이터 분석 · 창업 환경</p><details><summary>프로젝트 상세 보기 <span class="plus" aria-hidden="true"></span></summary><dl><dt>문제</dt><dd>대전 서구의 업종별 창업 환경을 데이터로 이해하는 과제입니다.</dd><dt>나의 역할</dt><dd>수업 프로젝트에 참여했습니다.</dd><dt>해결 방법</dt><dd>업종별 사업체 수, 폐업률, 생존율 등의 지표를 분석 대상으로 삼았습니다.</dd><dt>결과</dt><dd>세부 분석 결과 및 사용 도구는 확인 후 추가할 예정입니다.</dd></dl></details></article>
+
+<article class="project" data-category="data"><div class="project-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 16v-4m5 4V7m5 9v-6"/></svg></span><span class="index">10 / 13</span></div><p class="eyebrow">데이터 · 마케팅 <span class="dot">·</span> 추가 기록 예정</p><h3>Business Analytics SNS 마케팅</h3><p class="meta">경영학 전공 수업<br>수강 프로젝트</p><p class="project-result">최종 분석 대상 기업 및 결과는 확인 후 추가할 예정입니다.</p><p class="tags">SNS · 마케팅 분석</p><details><summary>프로젝트 상세 보기 <span class="plus" aria-hidden="true"></span></summary><dl><dt>문제</dt><dd>기업의 SNS 콘텐츠와 마케팅 전략을 이해하는 과제입니다.</dd><dt>나의 역할</dt><dd>팀 프로젝트에 참여했습니다.</dd><dt>해결 방법</dt><dd>기업의 SNS 마케팅 사례를 조사하고 콘텐츠와 마케팅 전략을 분석하는 방향으로 진행했습니다.</dd><dt>결과</dt><dd>최종 분석 대상 기업 및 결과는 확인 후 추가할 예정입니다.</dd></dl></details></article>
+
+<article class="project" data-category="impact"><div class="project-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20c-5-3-9-7-9-12a5 5 0 0 1 9-2 5 5 0 0 1 9 2c0 5-4 9-9 12Z"/><path d="M8 12h3l2-3 2 3h2"/></svg></span><span class="index">11 / 13</span></div><p class="eyebrow">사회혁신 · 기획 <span class="dot">·</span> 완료</p><h3>UIA 임팩톤얼라이언스</h3><p class="meta">University Impact Alliance 1기<br>2026.07.16 – 18</p><p class="project-result">9개 대학 11개 캠퍼스 55명이 참여한 프로그램을 경험했습니다. 세부 솔루션은 추가 기록 예정입니다.</p><p class="tags">사회혁신 · PBL · 협업</p><details><summary>프로젝트 상세 보기 <span class="plus" aria-hidden="true"></span></summary><dl><dt>문제</dt><dd>춘천 지역의 사회·환경문제 해결에 도전했습니다.</dd><dt>나의 역할</dt><dd>현장 기반 PBL 프로그램에 참가했습니다.</dd><dt>해결 방법</dt><dd>팀별 협업과 멘토링을 통해 문제 정의, 필드 리서치, 솔루션 도출, 발표를 수행했습니다.</dd><dt>결과</dt><dd>9개 대학 11개 캠퍼스 55명이 참여한 프로그램을 경험했습니다. 세부 솔루션은 추가 기록 예정입니다.</dd></dl></details></article>
+
+<article class="project" data-category="impact"><div class="project-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20c-5-3-9-7-9-12a5 5 0 0 1 9-2 5 5 0 0 1 9 2c0 5-4 9-9 12Z"/><path d="M8 12h3l2-3 2 3h2"/></svg></span><span class="index">12 / 13</span></div><p class="eyebrow">사회혁신 · 운영 <span class="dot">·</span> 추가 기록 예정</p><h3>사회적가치페스타 팝업부스</h3><p class="meta">UIA 연계 활동<br>2026.09.21 – 22</p><p class="project-result">실제 현장 수행 내용과 최종 성과는 확인 후 추가할 예정입니다.</p><p class="tags">행사 운영 · 협업</p><details><summary>프로젝트 상세 보기 <span class="plus" aria-hidden="true"></span></summary><dl><dt>문제</dt><dd>사회적 가치에 대한 관심을 현장 활동으로 연결하는 프로젝트입니다.</dd><dt>나의 역할</dt><dd>팝업부스 운영팀으로 배정되었습니다.</dd><dt>해결 방법</dt><dd>사전 미팅과 현장 운영 준비에 참여하는 계획을 세웠습니다.</dd><dt>결과</dt><dd>실제 현장 수행 내용과 최종 성과는 확인 후 추가할 예정입니다.</dd></dl></details></article>
+
+<article class="project" data-category="finance"><div class="project-top"><span class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18h18M5 14l4-4 4 2 6-7M15 5h4v4"/></svg></span><span class="index">13 / 13</span></div><p class="eyebrow">금융 · 투자 <span class="dot">·</span> 준비 이력</p><h3>교내 자산운용대회</h3><p class="meta">교내 활동<br>2026년 11월 예정</p><p class="project-result">참가 여부와 최종 성과는 확인 후 반영할 예정입니다.</p><p class="tags">투자 · 자산배분</p><details><summary>프로젝트 상세 보기 <span class="plus" aria-hidden="true"></span></summary><dl><dt>문제</dt><dd>투자 분석과 자산운용 역량을 강화하기 위한 도전입니다.</dd><dt>나의 역할</dt><dd>대회 참여를 준비했습니다.</dd><dt>해결 방법</dt><dd>구체적인 운용 전략 및 역할은 추가 확인이 필요합니다.</dd><dt>결과</dt><dd>참가 여부와 최종 성과는 확인 후 반영할 예정입니다.</dd></dl></details></article>
+</div><p class="note">진행 중이거나 세부 결과가 확인되지 않은 프로젝트는 상태를 구분하여 표시했습니다.</p></div></section>
+
+<section id="skills" class="section"><div class="wrap"><div class="section-head"><div><p class="eyebrow">02 / Skills</p><h2>배운 것을 실제로 활용합니다.</h2></div><p>도구와 지식뿐 아니라, 어디에서 어떻게 사용했는지 함께 기록했습니다.</p></div><div class="skill-grid">
+<article class="skill"><span class="index">01</span><h3>금융 · 재무</h3><p class="skill-tools">재무설계, 자산운용, 재무제표 및 기업가치 분석</p><p>AFPK 학습을 AI 재무설계에 연결하고 EIC 기업분석과 자산운용대회에서 금융 지식을 활용했습니다.</p></article>
+
+<article class="skill"><span class="index">02</span><h3>데이터 · 분석</h3><p class="skill-tools">Excel, DDM·FCFE, 재무비율, 데이터 구조화</p><p>Excel로 가치평가 수식을 구성하고 DB 시뮬레이션에서 ROE와 총자산 성장률을 분석했습니다.</p></article>
+
+<article class="skill"><span class="index">03</span><h3>마케팅 · 영업</h3><p class="skill-tools">Meta 광고, Instagram, STP, A/B 테스트</p><p>EIC 유료 광고 운영 및 협찬 제안, 오마이브랜드 릴스 성과 비교에 활용했습니다.</p></article>
+
+<article class="skill"><span class="index">04</span><h3>AI · 서비스 기획</h3><p class="skill-tools">생성형 AI, 현장 조사, PBL</p><p>AI 재무설계 사이트 제작, AI 광고 제작 및 유니메트로 경로 데이터 구축에 참여했습니다.</p></article>
+
+<article class="skill"><span class="index">05</span><h3>소통 · 리더십</h3><p class="skill-tools">PowerPoint, 제안서, 발표, 팀 운영</p><p>EIC 대외사업부와 자산운용대회, 유니메트로 팀장, 교육봉사 활동에서 이해하기 쉬운 전달과 협업을 경험했습니다.</p></article>
+
+<article class="skill"><span class="index">06</span><h3>콘텐츠 · 실행</h3><p class="skill-tools">경제 기사 분석, 카드뉴스 제작, 일정 관리</p><p>매경이코노미 경제 카드뉴스 6편을 제작하며 핵심 정보를 선별하고 구조화했습니다.</p></article>
+</div><h3 class="subhead">자격증 및 어학</h3><div class="credentials"><div class="credential"><span>금융 자격</span><strong>AFPK</strong><p>2026년 9월 취득</p></div><div class="credential"><span>영어 회화</span><strong>OPIc IH</strong><p>2026년 9월 취득</p></div><div class="credential"><span>영어 어학</span><strong>TOEIC 835</strong><p>보유 성적</p></div></div><h3 class="subhead">전공 학습</h3><div class="courses"><div class="course"><strong>금융 · 재무</strong><p>재무관리, 투자론, 파생금융상품, 회계학원론</p></div><div class="course"><strong>경영 · 마케팅</strong><p>경영전략론, 인적자원관리, 마케팅, 생산경영, 경영학원론</p></div><div class="course"><strong>데이터 · 분석</strong><p>Business Analytics, 데이터과학프로그래밍</p></div><div class="course"><strong>혁신 · 창업</strong><p>글로벌스타트업사례연구, 서비스디자인과공감혁신, 소셜벤처창업, 캡스톤디자인</p></div></div><p class="note">기타 교육: Self-Making Job Portfolio 30시간 이상 이수. 기재한 도구는 실제 활동과 연결된 경험을 기준으로 구성했습니다. 프로그래밍 언어의 숙련도는 별도로 단정하지 않았습니다.</p></div></section>
+
+<section id="activities" class="section alt-bg"><div class="wrap"><div class="section-head"><div><p class="eyebrow">03 / Experiences</p><h2>경험과 도전의 기록.</h2></div><p>활동 기간, 담당 역할, 배운 점을 중심으로 성장의 과정을 기록했습니다.</p></div><div class="activity-layout"><aside class="awards"><p class="eyebrow">Selected achievements</p><h3>주요 수상 및 성과</h3><div class="award"><strong>EIC 45기 최우수 수료</strong><span>2025.12 · 100명 중 가산점 1위</span></div><div class="award"><strong>비즈니스모델 경진대회 1위</strong><span>2025년 하반기 · EIC</span></div><div class="award"><strong>기업분석대회 2위</strong><span>2025년 하반기 · EIC</span></div><div class="award"><strong>매경이코노미 우수 서포터즈</strong><span>2026.06 · 전체 25명</span></div><div class="award"><strong>자산운용대회 4위</strong><span>2025년 하반기 · 프로젝트 성과</span></div><div class="award"><strong>DB 경영 시뮬레이션 3위</strong><span>2025.08 · 10개 팀 중</span></div></aside><ol class="timeline">
+<li class="activity"><div class="activity-date"><time>2026년 하반기</time><span>공모전</span></div><div class="activity-content"><h3>AFPK 영 플래너 챌린지 2026</h3><p><strong>역할</strong> AI 재무설계 웹사이트 제작 참여</p><p><strong>배운 점</strong> 재무설계 이론의 서비스 적용과 AI 활용</p><span class="activity-result">진행 중</span></div></li>
+
+<li class="activity"><div class="activity-date"><time>2026.09 – 12 예정</time><span>서포터즈</span></div><div class="activity-content"><h3>고려신용정보 대학생 서포터즈 3기</h3><p><strong>역할</strong> 최종 선발, 신용정보 관련 콘텐츠 기획</p><p><strong>배운 점</strong> 금융 이슈를 이해하기 쉬운 정보로 전달</p><span class="activity-result">진행 중</span></div></li>
+
+<li class="activity"><div class="activity-date"><time>2026.09.21 – 22</time><span>사회혁신</span></div><div class="activity-content"><h3>사회적가치페스타</h3><p><strong>역할</strong> UIA 연계 팝업부스 운영팀 배정</p><p><strong>배운 점</strong> 행사 운영 및 협업 경험의 확장</p><span class="activity-result">수행 내용 확인 필요</span></div></li>
+
+<li class="activity"><div class="activity-date"><time>2026.07.16 – 18</time><span>사회혁신</span></div><div class="activity-content"><h3>UIA 임팩톤얼라이언스 1기</h3><p><strong>역할</strong> 현장 기반 PBL, 팀별 문제 정의 및 솔루션 발표</p><p><strong>배운 점</strong> 사회문제 해결과 협업</p><span class="activity-result">55명 참가</span></div></li>
+
+<li class="activity"><div class="activity-date"><time>2026.05</time><span>장학</span></div><div class="activity-content"><h3>경영학과 자쓰리 장학금</h3><p><strong>역할</strong> 학과 장학금 수혜 확정</p><p><strong>배운 점</strong> 꾸준한 학업 관리</p><span class="activity-result">장학금</span></div></li>
+
+<li class="activity"><div class="activity-date"><time>2026.04.02 – 06.26</time><span>서포터즈</span></div><div class="activity-content"><h3>매경이코노미 서포터즈</h3><p><strong>역할</strong> 경제 기사 분석 및 카드뉴스 6편 제작</p><p><strong>배운 점</strong> 경제적 독해력, 정보 구조화, 일정 관리</p><span class="activity-result">25명 중 우수 서포터즈</span></div></li>
+
+<li class="activity"><div class="activity-date"><time>2026.03 – 06</time><span>캡스톤</span></div><div class="activity-content"><h3>유니메트로</h3><p><strong>역할</strong> 팀장, 김포공항역 경로 조사 및 가이드라인 제작</p><p><strong>배운 점</strong> 고객 관점과 데이터 정확성</p><span class="activity-result">프로젝트 완료</span></div></li>
+
+<li class="activity"><div class="activity-date"><time>2026.02.27 – 06.26</time><span>동아리</span></div><div class="activity-content"><h3>EIC 40대 대외사업부 차장</h3><p><strong>역할</strong> 홍보, 광고, 협찬 및 제휴</p><p><strong>배운 점</strong> 상대방의 니즈를 고려한 제안과 신뢰 형성</p><span class="activity-result">협찬 약 2배</span></div></li>
+
+<li class="activity"><div class="activity-date"><time>2025.09 – 12</time><span>캡스톤</span></div><div class="activity-content"><h3>오마이브랜드</h3><p><strong>역할</strong> AI 광고 제작 및 A/B 테스트</p><p><strong>배운 점</strong> 타깃 중심의 데이터 기반 마케팅</p><span class="activity-result">프로젝트 완료</span></div></li>
+
+<li class="activity"><div class="activity-date"><time>2025.08.20 – 22</time><span>대외활동</span></div><div class="activity-content"><h3>DB 대학생 기업경영 체험스쿨 110기</h3><p><strong>역할</strong> COO, 생산 및 운영 전략</p><p><strong>배운 점</strong> 재무지표 기반 의사결정</p><span class="activity-result">10개 팀 중 3위</span></div></li>
+
+<li class="activity"><div class="activity-date"><time>2025.08.19 – 12.19</time><span>동아리</span></div><div class="activity-content"><h3>EIC 45기 코스생</h3><p><strong>역할</strong> 경제토론·자산운용·기업분석·비즈니스모델 경진 참가</p><p><strong>배운 점</strong> 실전 투자분석, 협업 및 자기주도 학습</p><span class="activity-result">최우수 수료 · BM 1위 · 기업분석 2위 · 자산운용 4위</span></div></li>
+
+<li class="activity"><div class="activity-date"><time>2025.07.17 – 08.12</time><span>봉사</span></div><div class="activity-content"><h3>아름다운가게 김포점</h3><p><strong>역할</strong> 매장 관리, 고객 응대, 기부 물품 접수 및 분류</p><p><strong>배운 점</strong> 서비스 마인드, 순환경제와 ESG</p><span class="activity-result">28시간</span></div></li>
+
+<li class="activity"><div class="activity-date"><time>2025.07</time><span>봉사</span></div><div class="activity-content"><h3>김포아트빌리지</h3><p><strong>역할</strong> 전시장 운영 지원</p><p><strong>배운 점</strong> 책임감과 현장 서비스</p><span class="activity-result">8시간</span></div></li>
+
+<li class="activity"><div class="activity-date"><time>2022.08 – 12</time><span>교육봉사</span></div><div class="activity-content"><h3>교육봉사 동아리 사랑살기</h3><p><strong>역할</strong> 저소득층 중학생 수학 지도</p><p><strong>배운 점</strong> 눈높이 소통, 인내심, 자기성찰</p><span class="activity-result">교육봉사</span></div></li>
+</ol></div><div class="archive"><h3>경제 콘텐츠 기록</h3><p>매경이코노미 서포터즈로 경제 기사와 산업 이슈를 분석하고 카드뉴스 6편을 제작했습니다. 확인된 주요 주제는 아래와 같습니다.</p><div class="topic-list"><span>전력 인프라</span><span>반도체</span><span>코스피</span><span>프로야구 구단 재무</span><span>드론 산업</span></div><p class="note">나머지 1편의 주제 및 실제 제작물은 확인 후 추가할 예정입니다.</p></div></div></section>
+
+<section id="contact" class="contact"><div class="wrap contact-grid"><div><p class="eyebrow">04 / Contact</p><h2>함께 이야기해요.</h2><p>금융, 자산관리, 데이터 분석과 새로운 프로젝트에 관한 이야기를 환영합니다.</p></div><div class="contact-card"><p>권형우 · 이메일</p><a class="mail" href="mailto:johnkwonno1@naver.com">johnkwonno1@naver.com</a><div class="contact-actions"><a class="btn" href="mailto:johnkwonno1@naver.com">이메일 보내기</a><button type="button" class="btn alt" id="copy-email">주소 복사</button></div><p id="copy-status" class="copy-status" role="status"></p></div></div></section>
+</main><footer class="footer"><div class="wrap"><span>© 2026 권형우 · Portfolio</span><a href="#about">맨 위로 ↑</a></div></footer><script>
+'use strict';
+document.documentElement.classList.add('js');
+const menu=document.querySelector('.menu-toggle'), nav=document.querySelector('#navigation');
+function closeMenu(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');}
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});
+nav.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){closeMenu();menu.focus();}});
+const filters=[...document.querySelectorAll('.filter')], cards=[...document.querySelectorAll('.project')], count=document.querySelector('#project-count');
+filters.forEach(button=>button.addEventListener('click',()=>{const category=button.dataset.filter;filters.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));let n=0;cards.forEach(card=>{card.hidden=category!=='all'&&card.dataset.category!==category;if(!card.hidden)n++;});count.textContent=`전체 ${cards.length}개 중 ${n}개 표시`; }));
+const email='johnkwonno1@naver.com';
+document.querySelector('#copy-email').addEventListener('click',async()=>{const status=document.querySelector('#copy-status');try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(email);}else{const t=document.createElement('textarea');t.value=email;t.style.position='fixed';t.style.opacity='0';document.body.append(t);t.select();const ok=document.execCommand('copy');t.remove();if(!ok)throw Error('copy failed');}status.textContent='이메일 주소를 복사했습니다.';}catch{status.textContent='자동 복사가 지원되지 않습니다. 위 이메일 주소를 직접 복사해 주세요.';}});
+if('IntersectionObserver' in window){const links=[...nav.querySelectorAll('a')];const sections=links.map(a=>document.querySelector(a.hash)).filter(Boolean);const active=new Set();const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)active.add(entry.target);else active.delete(entry.target);});const current=sections.find(s=>active.has(s));if(current)links.forEach(a=>{if(a.hash==='#'+current.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});},{rootMargin:'-20% 0px -55% 0px'});sections.forEach(s=>observer.observe(s));}
+// Only the illustration moves. No layout changes, external dependencies or CSS animation.
+const scene=document.querySelector('.scene-motion'), stage=document.querySelector('.scene-stage'), hero=document.querySelector('#about'), toggle=document.querySelector('#motion-toggle');
+const reduced=matchMedia('(prefers-reduced-motion: reduce)'), fine=matchMedia('(hover: hover) and (pointer: fine)'), desktop=matchMedia('(min-width: 721px)');
+let userPaused=false,frame=0,last=null,elapsed=0,px=0,py=0,angle=0,tx=0,ty=0,ta=0,scrollY=0,scrollTarget=0;
+const clamp=(n,min,max)=>Math.min(max,Math.max(min,n));
+const canTrack=()=>fine.matches&&desktop.matches;
+const canRun=()=>!userPaused&&!reduced.matches&&!document.hidden;
+function resetTarget(){tx=ty=ta=0;}
+function updateScroll(){scrollTarget=clamp(window.scrollY*.12,0,20);}
+function stopFrame(){if(frame)cancelAnimationFrame(frame);frame=0;last=null;}
+function resetScene(){resetTarget();px=py=angle=scrollY=0;scene.style.transform='none';}
+function render(now){frame=0;if(!canRun())return;const dt=last===null?0:Math.min(now-last,64);last=now;elapsed=(elapsed+dt)%7000;const mix=1-Math.exp(-dt/125);px+=(tx-px)*mix;py+=(ty-py)*mix;angle+=(ta-angle)*mix;scrollY+=(scrollTarget-scrollY)*mix;const floating=5*Math.sin(2*Math.PI*elapsed/7000);const x=canTrack()?clamp(px,-8,8):0;const y=floating-scrollY+(canTrack()?clamp(py,-5,5):0);const tilt=canTrack()?clamp(angle,-4,4):0;scene.style.transform=`translate3d(${x.toFixed(3)}px,${y.toFixed(3)}px,0) rotate(${tilt.toFixed(3)}deg)`;frame=requestAnimationFrame(render);}
+function syncMotion(){stopFrame();toggle.disabled=reduced.matches;toggle.setAttribute('aria-pressed',String(userPaused||reduced.matches));toggle.textContent=reduced.matches?'움직임 제한 중':userPaused?'움직임 재생':'움직임 멈춤';if(!canRun()){if(userPaused||reduced.matches)resetScene();return;}updateScroll();frame=requestAnimationFrame(render);}
+hero.addEventListener('pointermove',event=>{if(!canRun()||!canTrack()||event.pointerType!=='mouse')return;const rect=stage.getBoundingClientRect();const nx=clamp((event.clientX-(rect.left+rect.width/2))/(rect.width/2),-1,1),ny=clamp((event.clientY-(rect.top+rect.height/2))/(rect.height/2),-1,1);tx=nx*8;ty=ny*5;ta=nx*4;},{passive:true});
+hero.addEventListener('pointerleave',resetTarget);hero.addEventListener('pointercancel',resetTarget);window.addEventListener('blur',resetTarget);window.addEventListener('scroll',updateScroll,{passive:true});
+toggle.addEventListener('click',()=>{if(reduced.matches)return;userPaused=!userPaused;syncMotion();});
+function mediaChanged(){resetTarget();px=py=angle=0;syncMotion();}
+for(const query of [reduced,fine,desktop]){if(query.addEventListener)query.addEventListener('change',mediaChanged);else query.addListener(mediaChanged);}
+document.addEventListener('visibilitychange',()=>{resetTarget();syncMotion();});syncMotion();
+</script></body></html>
